@@ -1,0 +1,150 @@
+/* style.css */
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+	height: 100vh;
+    align-items: center;
+    background: linear-gradient(135deg, #71b7e6, #9b59b6);
+    margin: 0;
+    flex-direction: column;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    max-width: 1200px;
+    transition: all 0.3s;
+}
+
+@media (min-aspect-ratio: 1/1) {
+    .main-container {
+        flex-direction: row;
+    }
+}
+
+.container {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    flex: 1;
+}
+
+h1, h2 {
+    text-align: center;
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.input-form, .management {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.input-form label {
+    margin-bottom: 5px;
+    color: #555;
+    font-weight: bold;
+}
+
+.input-form select, .management input, .input-form input[type="datetime-local"] {
+    padding: 8px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.input-form button, .management button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin-right: 5px;
+}
+
+.update-btn {
+    background: #4CAF50;
+    color: white;
+}
+
+.update-btn:hover {
+    background: #45a049;
+}
+
+.cancel-btn {
+    background: #f44336;
+    color: white;
+}
+
+.cancel-btn:hover {
+    background: #e53935;
+}
+
+.add-btn {
+    background: #008CBA;
+    color: white;
+}
+
+.add-btn:hover {
+    background: #007BB5;
+}
+
+.delete-btn {
+    background: #f0ad4e;
+    color: white;
+}
+
+.delete-btn:hover {
+    background: #ec971f;
+}
+
+.reset-btn {
+    background: #d9534f;
+    color: white;
+}
+
+.reset-btn:hover {
+    background: #c9302c;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+    font-size: 16px;
+}
+
+th {
+    background-color: #f2f2f2;
+    color: #333;
+}
+
+td {
+    background-color: #fafafa;
+}
+
+tr:nth-child(even) td {
+    background-color: #f9f9f9;
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chess Elo Rating System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main-container">
+        <div class="container inputs">
+            <h1>Chess Elo Rating System</h1>
+            <div class="input-form">
+                <label for="winner">Winner:</label>
+                <select id="winner"></select>
+                <label for="loser">Loser:</label>
+                <select id="loser"></select>
+                <label for="time">Time:</label>
+                <input type="datetime-local" id="time">
+                <div class="buttons">
+                    <button class="update-btn" onclick="updateRatings()">Update Ratings</button>
+                    <button class="cancel-btn" onclick="cancelUpdate()">Cancel</button>
+                </div>
+            </div>
+            <div class="management">
+                <input type="text" id="person-name" placeholder="Enter name">
+                <div class="buttons">
+                    <button class="add-btn" onclick="addPerson()">Add Person</button>
+                    <button class="delete-btn" onclick="deletePerson()">Delete Person</button>
+                    <button class="reset-btn" onclick="resetStorage()">Reset</button>
+                </div>
+            </div>
+        </div>
+        <div class="container ranking">
+            <h2>Rankings</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Rank</th>
+                        <th>Player</th>
+                        <th>Rating</th>
+                    </tr>
+                </thead>
+                <tbody id="ranking-table">
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="container recent-matches">
+        <h2>Recent Matches</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Time</th>
+                    <th>Winner</th>
+                    <th>Loser</th>
+                </tr>
+            </thead>
+            <tbody id="recent-matches-table">
+            </tbody>
+        </table>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
